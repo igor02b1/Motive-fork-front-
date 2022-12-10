@@ -37,35 +37,40 @@ function Login() {
     }
   }
 
-  return (
-    <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "calc(100vh - 140px)" }}>
-      <Grid alignItems='center' xs={6}>
-        <Box paddingX={20}>
-          <form onSubmit={handleSubmit(handleLogin)}>
-            <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos1'>Entrar</Typography>
-            <TextField {...register('email')} id='email' label='email' variant='outlined' name='email' margin='normal' fullWidth />
-            <TextField {...register('senha')} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
-            <Box marginTop={2} textAlign='center'>
-              <Button type='submit' variant='contained' color='primary'>
-                Logar
-              </Button>
-            </Box>
-          </form>
-          <Box display='flex' justifyContent='center' marginTop={2}>
-            <Box marginRight={1}>
-              <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
-            </Box>
-            <Link to="/register">
-              <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
-            </Link>
-          </Box>
-        </Box>
-      </Grid>
-      <Grid xs={6} className='imagem'>
+    return (
+        <Grid className="container" sx={{ height: "calc(100vh - 140px)" }}>
+          <div className="container-login">
+            <div className="wrap-login">
+              <form action="" className="login-form">
+                
+                <h1 className='login-title'>LOGIN</h1>
 
-      </Grid>
-    </Grid>
-  );
-}
+                <div className="wrap-input">
+                  <input className="input" type="E-MAIL" />
+                  <span className="focus-input" data-placeholder="Email"></span>
+                </div>
 
-export default Login;
+                <div className="wrap-input">
+                  <input className="input" type="SENHA" />
+                  <span className="focus-input" data-placeholder="senha"></span>
+                </div>
+
+                <div className="container-login-btn">
+                  <button className="login btn">LOGIN</button>
+                </div>
+
+                <div className="text-center">
+                    <span className="txt1">não possui conta?</span>
+                  <Link to="/register">
+                    <span className="txt2">Cadatre-se</span>
+                  </Link>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </Grid>
+    );
+  }
+
+  export default Login;
