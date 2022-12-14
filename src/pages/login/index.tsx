@@ -56,7 +56,7 @@ function Login() {
             <TextField {...register('email')} id='email' label='email' variant='outlined' name='email' margin='normal' fullWidth />
             <TextField {...register('senha')} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
             <Box marginTop={2} textAlign='center'>
-              <Button type='submit' variant='contained' color='primary' className='botão-login'>
+              <Button type='submit' variant='contained' color='primary' className='botão-login' sx={{backgroundColor: "#0DCA70", width: "260px", ":hover": { backgroundColor: "#000"} }}>
                 Login
               </Button>
               <Box display='flex' justifyContent='center' marginTop={2}>
